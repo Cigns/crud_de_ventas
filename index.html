@@ -13,25 +13,32 @@
         <div class="container-fluid">
           <span class="navbar-brand mb-0 h1">Cotiza con nosotros</span>
         </div>
-      </nav>
-    <h1>Arma la carta de tu evento</h1>
-    <h4>Ingresa el nombre de los cócteles que deseas en tu evento</h4>
-    <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Nombre del cóctel</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Ingresa sólo el nombre del cóctel. Ej: "Tequila margarita"</div>
-        </div>
-        <!-- <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div> -->
-        <!-- <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div> -->
-        <button type="submit" class="btn btn-primary">Agregar</button>
-      </form>
-    <script src="main.js"></script>
+    </nav>
+    <div class="container">
+        <h1>¡Arma la carta de tu evento!</h1>
+        <br>
+        <h4>Ingresa el nombre de los cócteles que deseas en tu evento</h4>
+        <br>
+        <form>
+            <div class="mb-3">
+                <label for="text" class="form-label">¡Personaliza tu carta!</label>
+                <input type="text" class="form-control" id="inputCoctel" aria-describedby="formHelp">
+                <div id="emailHelp" class="form-text">Ingresa sólo el nombre del cóctel. Ej: "Tequila margarita"</div>
+            </div>
+            <!-- <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div> -->
+            <!-- <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <button type="submit" id="crear" class="btn btn-primary">Agregar</button>
+            <button type="submit" id="modificar" class="btn btn-primary">Modificar</button>
+            <button type="submit" id="eliminar" class="btn btn-primary">Eliminar</button>
+            <button type="submit" id="listar" class="btn btn-primary">Mostrar lista</button>
+        </form>
+    </div>
+        <script src="main.js"></script>
 </body>
 </html>
