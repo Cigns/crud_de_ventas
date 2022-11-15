@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar bg-light">
+    <nav class="navbar bg-light" id="navbar">
         <div class="container-fluid">
           <span class="navbar-brand mb-0 h1">Cotiza con nosotros</span>
         </div>
@@ -19,10 +19,10 @@
         <br>
         <h4>Ingresa el nombre de los cócteles que deseas en tu evento</h4>
         <br>
-        <form>
+        <form id="formulario">
             <div class="mb-3">
                 <label for="text" class="form-label">¡Personaliza tu carta!</label>
-                <input type="text" class="form-control" id="inputCoctel" aria-describedby="formHelp">
+                <input type="text" class="form-control" id="coctel" aria-describedby="formHelp">
                 <div id="emailHelp" class="form-text">Ingresa sólo el nombre del cóctel. Ej: "Tequila margarita"</div>
             </div>
             <!-- <div class="mb-3">
@@ -34,10 +34,12 @@
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div> -->
             <button type="submit" id="crear" class="btn btn-primary">Agregar</button>
-            <button type="submit" id="modificar" class="btn btn-primary">Modificar</button>
-            <button type="submit" id="eliminar" class="btn btn-primary">Eliminar</button>
-            <button type="submit" id="listar" class="btn btn-primary">Mostrar lista</button>
+            <button type="#" id="Limpiar" class="btn btn-primary">Limpiar</button>
         </form>
+        <hr>
+        <table id="display" class="table table-hover">
+    
+        </table>
     </div>
         <script src="main.js"></script>
 </body>
