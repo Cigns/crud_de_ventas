@@ -9,8 +9,11 @@ let editando = false;
 const formulario = document.querySelector('#formulario')
 const coctelInput = document.querySelector('#coctel')
 const btnAgregar = document.querySelector('#crear')
+const btnLimpiar = document.querySelector('#limpiar')
 
 formulario.addEventListener('submit', validarFormulario);
+
+formulario.addEventListener('reset', limpiarTodo);
 
 function validarFormulario(e) {
     e.preventDefault();
@@ -71,7 +74,7 @@ function mostrarCocteles() {
         parrafo.append(eliminarBoton);
 
         divCocteles.appendChild(parrafo);
-        //divCocteles.appendChild(hr);
+        
     });
 }
 
@@ -123,4 +126,9 @@ function limpiarHTML() {
     while (divCocteles.firstChild) {
         divCocteles.removeChild(divCocteles.firstChild);
     }
+}
+
+function limpiarTodo() {
+
+    formulario.reset();
 }
