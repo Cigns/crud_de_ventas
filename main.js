@@ -65,7 +65,7 @@ function mostrarCocteles() {
         parrafo.append(editarBoton);
 
         const eliminarBoton = document.createElement('button');
-        //editarBoton.onclick = () => cargarCoctel(coctel);
+        eliminarBoton.onclick = () => eliminarCoctel(id);
         eliminarBoton.textContent = 'Eliminar'
         eliminarBoton.classList.add = ('btn', 'btn-primary');
         parrafo.append(eliminarBoton);
@@ -106,6 +106,15 @@ function editarCoctel() {
     formulario.querySelector('button[type="submit"]').textContent = "Agregar";
 
     editando = false;
+}
+
+function eliminarCoctel(id) {
+    
+    listaCocteles = listaCocteles.filter(coctel => coctel.id !== id);
+
+    limpiarHTML();
+    mostrarCocteles();
+
 }
 
 function limpiarHTML() {
