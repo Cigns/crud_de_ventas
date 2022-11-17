@@ -35,9 +35,21 @@ function agregarCoctel() {
     listaCocteles.push({...objCoctel});
 
     mostrarCocteles();
+
+    formulario.reset()
+
+    limpiarObjeto()
+}
+
+function limpiarObjeto() {
+    objCoctel.id = '';
+    objCoctel.nombre = '';
 }
 
 function mostrarCocteles() {
+
+    limpiarHTML();
+
     const divCocteles = document.querySelector('#display');
     listaCocteles.forEach(coctel => {
         const {id, nombre} = coctel;
@@ -47,7 +59,7 @@ function mostrarCocteles() {
         parrafo.dataset.id = id;
 
         const editarBoton = document.createElement('button');
-        //editarBoton.onclick = () => cargarCoctel(coctel);
+        editarBoton.onclick = () => cargarCoctel(coctel);
         editarBoton.textContent = 'Editar'
         editarBoton.classList.add = ('btn', 'btn-primary');
         parrafo.append(editarBoton);
@@ -59,6 +71,47 @@ function mostrarCocteles() {
         parrafo.append(eliminarBoton);
 
         divCocteles.appendChild(parrafo);
-        divCocteles.appendChild(hr);
+        //divCocteles.appendChild(hr);
     });
+}
+
+function cargarCoctel(coctel) {
+    
+    const {id, nombre} = coctel;
+
+    coctelInput.value = nombre;
+
+    objCoctel.id = id;
+
+    formulario.querySelector('button[type="submit"]').textContent = 'Actualizar';
+
+    editando = true;
+}
+
+function editarCoctel() {
+    objCoctel.nombre = coctelInput.value;
+
+    listaCocteles.map( coctel => {
+        
+        if(coctel.id === objCoctel.id) {
+            coctel.id = objCoctel.id;
+            coctel.nombre = objCoctel.nombre;
+        }
+    });
+
+    limpiarHTML();
+    mostrarCocteles();
+
+    formulario.reset();
+    formulario.querySelector('button[type="submit"]').textContent = "Agregar";
+
+    editando = false;
+}
+
+function limpiarHTML() {
+
+    const divCocteles = document.querySelector('#display')
+    while (divCocteles.firstChild) {
+        divCocteles.removeChild(divCocteles.firstChild);
+    }
 }
