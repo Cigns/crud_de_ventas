@@ -39,9 +39,11 @@ function agregarCoctel() {
 
     mostrarCocteles();
 
-    formulario.reset()
+    formulario.reset();
 
-    limpiarObjeto()
+    limpiarObjeto();
+
+    localStorage.setItem('formulario', JSON.stringify(nombre));
 }
 
 function limpiarObjeto() {
@@ -126,9 +128,4 @@ function limpiarHTML() {
     while (divCocteles.firstChild) {
         divCocteles.removeChild(divCocteles.firstChild);
     }
-}
-
-function limpiarTodo() {
-
-    formulario.reset();
 }
