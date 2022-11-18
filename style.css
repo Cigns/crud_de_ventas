@@ -2,3 +2,46 @@
     padding: 0rem;
     margin: 0rem;
 }
+
+body {
+    background-color: rgb(208, 209, 141);
+}
+
+#encabezado {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+img {
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+}
+
+h4 {
+    text-align: center;
+}
+
+#formulario {
+    background-color: lightblue;
+    border-radius: 2rem;
+    display: inline-grid;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.form-label {
+    display: flex;
+    justify-content: center;
+}
+
+#crear {
+    background-color: black;
+    border-color: grey;
+}
